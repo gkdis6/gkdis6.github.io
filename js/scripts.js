@@ -31,4 +31,12 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
+    const myPri = ["박", "朴", "Park"]
+    const myName = ["상용", "相勇", "SangYong"]
+    let ptr = 0;
+
+    setInterval(() => {
+        $('.my-name').html(`<span class="text-primary">${myPri[ptr%3]}</span> ${myName[ptr++%3]}`);
+    }, 5000);
+
 });
